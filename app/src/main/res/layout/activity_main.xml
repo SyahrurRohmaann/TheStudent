@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Register"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/baseline_app_registration_24" />
+
+    <Spinner
+        android:id="@+id/spin_gender"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:entries="@array/gender"
+        android:text="iPlih Jenis Kelamin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/m3_hint_foreground"
+        app:layout_constraintEnd_toEndOf="@+id/edt_phone"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+    <EditText
+        android:id="@+id/edt_namalengkap"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="Nama Lengkap"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_namalengkap"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_namalengkap"
+        app:layout_constraintTop_toBottomOf="@+id/edt_tgllahir" />
+
+    <EditText
+        android:id="@+id/edt_nim"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="NIM"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@+id/edt_namalengkap" />
+
+    <EditText
+        android:id="@+id/edt_alamat"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_pin_drop_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="Alamat"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nim"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_nim"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nim" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_username"
+        app:layout_constraintStart_toStartOf="@+id/edt_username"
+        app:layout_constraintTop_toBottomOf="@+id/edt_username" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_alamat" />
+
+    <EditText
+        android:id="@+id/edt_phone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_phone_iphone_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="No. HP"
+        android:inputType="phone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_alamat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_alamat"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+    <EditText
+        android:id="@+id/edt_tgllahir"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:drawableLeft="@drawable/baseline_calendar_month_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="Tanggal Lahir"
+        android:inputType="date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/edt_phone"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/edt_phone"
+        app:layout_constraintTop_toBottomOf="@+id/spin_gender" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#3D9E13"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        app:strokeColor="#18610E" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:drawableLeft="@drawable/baseline_transgender_24"
+        android:gravity="center"
+        android:text="Gender"
+        app:layout_constraintBottom_toTopOf="@+id/edt_tgllahir"
+        app:layout_constraintStart_toStartOf="@+id/edt_phone"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
