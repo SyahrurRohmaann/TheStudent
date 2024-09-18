@@ -33,7 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:entries="@array/gender"
-        android:text="iPlih Jenis Kelamin"
+        android:text="Plih Jenis Kelamin"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/m3_hint_foreground"
         app:layout_constraintEnd_toEndOf="@+id/edt_phone"
@@ -169,12 +169,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#3D9E13"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword"
         app:strokeColor="#18610E" />
 
     <TextView
@@ -187,5 +187,18 @@
         app:layout_constraintBottom_toTopOf="@+id/edt_tgllahir"
         app:layout_constraintStart_toStartOf="@+id/edt_phone"
         app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+    <EditText
+        android:id="@+id/editTextNumberPassword"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawablePadding="1dp"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password"
+        app:layout_constraintStart_toStartOf="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
