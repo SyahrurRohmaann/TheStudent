@@ -1,20 +1,21 @@
 package com.Alg.thestudent;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import java.util.Calendar;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         Button register;
+        TextView txtLogin;
         EditText tglLahir, namaLengkap, Nim, Alamat, Email, noHP, Username, Password;
         Spinner Gender;
         namaLengkap=findViewById(R.id.edt_namalengkap);
@@ -43,19 +46,12 @@ public class MainActivity extends AppCompatActivity {
         Password=findViewById(R.id.edt_password);
         register=findViewById(R.id.button);
 
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fullname = namaLengkap.getText().toString();
-                String nim = Nim.getText().toString();
-                String alamat = Alamat.getText().toString();
-                String email = Email.getText().toString();
-                String nohp = noHP.getText().toString();
-                String gender = Gender.getSelectedItem().toString();
-                String tgl = tglLahir.getText().toString();
-
-                Toast.makeText(MainActivity.this, "nama: " +fullname+ ", nim: "+nim+ ", alamat: "+alamat+ ", gender: "+gender+ ", tanggal lahir: " +tgl, Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(MainActivity.this, login.class);
+                startActivity(intent);
             }
         });
 
